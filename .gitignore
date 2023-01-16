@@ -127,3 +127,16 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Default SQLlite db created
+db.sqlite3
+
+# idea files to ignore
+.idea/*/.iml
+.idea/*/.iws
+.idea/*/.ipr
+.idea/
+
+# pycache files
+*.pyc
+*.pyo

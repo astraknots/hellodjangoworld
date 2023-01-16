@@ -1,0 +1,15 @@
+{% if latest_question_list %}
+    <ul>
+    {% for question in latest_question_list %}
+        <!-- This is the hardcoded path version
+        <li><a href="/polls/{{ question.id }}/">{{ question.question_text }}</a></li>
+        Below is using the path() fcn in polls.urls
+        This was before we added the namespace of 'polls':
+        <li><a href="{% url 'detail' question.id %}">{{ question.question_text }}</a></li>
+        -->
+        <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
